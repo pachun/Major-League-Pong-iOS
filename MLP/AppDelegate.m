@@ -6,18 +6,24 @@
 //  Copyright (c) 2012 RPI. All rights reserved.
 //
 
+#import <RestKit/RestKit.h>
+
 #import "AppDelegate.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 
+@protocol SuppressDelegateMethodWarnings
+-(void) initWithBaseURL:(NSURL *)url;
+@end
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    // Initialize MLPClient's destination URL (first assignment is universal)
+    [RKClient clientWithBaseURL:[NSURL URLWithString:@"http://mlpong.herokuapp.com"]];
+    [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://mlpong.herokuapp.com"]];
+    
     return YES;
 }
 

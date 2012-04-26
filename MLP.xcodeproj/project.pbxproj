@@ -18,6 +18,53 @@
 		EE76B506152928D2007BD356 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B4ED152928D2007BD356 /* Foundation.framework */; };
 		EE76B50E152928D2007BD356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE76B50C152928D2007BD356 /* InfoPlist.strings */; };
 		EE76B511152928D2007BD356 /* MLPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B510152928D2007BD356 /* MLPTests.m */; };
+		EE76B53115293744007BD356 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B52615293671007BD356 /* libRestKit.a */; };
+		EE76B5391529381D007BD356 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B5321529381D007BD356 /* CFNetwork.framework */; };
+		EE76B53A1529381D007BD356 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B5331529381D007BD356 /* CoreData.framework */; };
+		EE76B53B1529381D007BD356 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B5341529381D007BD356 /* libxml2.dylib */; };
+		EE76B53C1529381D007BD356 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B5351529381D007BD356 /* MobileCoreServices.framework */; };
+		EE76B53D1529381D007BD356 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B5361529381D007BD356 /* QuartzCore.framework */; };
+		EE76B53E1529381D007BD356 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B5371529381D007BD356 /* Security.framework */; };
+		EE76B53F1529381D007BD356 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B5381529381D007BD356 /* SystemConfiguration.framework */; };
+		EE76B5451529412B007BD356 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE76B5441529412B007BD356 /* Storyboard.storyboard */; };
+		EE76B54C152B3385007BD356 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B54B152B3385007BD356 /* LoginVC.m */; };
+		EE76B553152B37FB007BD356 /* LeagueDC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B552152B37FB007BD356 /* LeagueDC.m */; };
+		EE76B556152B3A03007BD356 /* League.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B555152B3A03007BD356 /* League.m */; };
+		EE76B559152B4845007BD356 /* LeaguesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B558152B4845007BD356 /* LeaguesVC.m */; };
+		EE76B55F152B4BC5007BD356 /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B55E152B4BC5007BD356 /* Season.m */; };
+		EE76B563152B4CB4007BD356 /* SeasonDC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B562152B4CB4007BD356 /* SeasonDC.m */; };
+		EE76B566152B516E007BD356 /* SeasonsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B565152B516E007BD356 /* SeasonsVC.m */; };
+		EE76B56B152B5865007BD356 /* 88-beer-mug.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76B568152B5865007BD356 /* 88-beer-mug.png */; };
+		EE76B56C152B5865007BD356 /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76B569152B5865007BD356 /* 111-user.png */; };
+		EE76B56D152B5865007BD356 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76B56A152B5865007BD356 /* 112-group.png */; };
+		EE76B571152B59A1007BD356 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B570152B59A0007BD356 /* Player.m */; };
+		EE76B575152B5A59007BD356 /* PlayerDC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B574152B5A59007BD356 /* PlayerDC.m */; };
+		EE76B578152B5D4E007BD356 /* PlayersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B577152B5D4E007BD356 /* PlayersVC.m */; };
+		EE76B57B152B6383007BD356 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B57A152B6383007BD356 /* Game.m */; };
+		EE76B57E152B6620007BD356 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B57D152B661F007BD356 /* Team.m */; };
+		EE76B581152B6674007BD356 /* TeamPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B580152B6674007BD356 /* TeamPlayer.m */; };
+		EE76B585152B6C2D007BD356 /* TeamDC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B584152B6C2D007BD356 /* TeamDC.m */; };
+		EE76B589152B6F85007BD356 /* TeamsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B588152B6F85007BD356 /* TeamsVC.m */; };
+		EE76B58D152D369E007BD356 /* GameDC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B58C152D369E007BD356 /* GameDC.m */; };
+		EE76B591152D5741007BD356 /* GamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B590152D5741007BD356 /* GamesVC.m */; };
+		EE76B594152D6148007BD356 /* UIGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B593152D6148007BD356 /* UIGameCell.m */; };
+		EE76B5C6152D6DBC007BD356 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B5C5152D6DBB007BD356 /* CoreText.framework */; };
+		EE7C51211549E9DE00D62B61 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7C51201549E9DE00D62B61 /* icon.png */; };
+		EE803D05153CD9FB00B7A2FE /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = EE803D04153CD9FB00B7A2FE /* grey.png */; };
+		EE86ED74153F819200C5E55D /* PlayerReselectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE86ED73153F819200C5E55D /* PlayerReselectVC.m */; };
+		EE86ED78154081D100C5E55D /* PlayerTurnView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE86ED77154081D100C5E55D /* PlayerTurnView.m */; };
+		EEEB68B215490F4D002F6722 /* ScoreGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEB68B115490F4D002F6722 /* ScoreGameVC.m */; };
+		EEEB68B61549B397002F6722 /* WinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEB68B51549B397002F6722 /* WinnerView.m */; };
+		EEFD50DC152DF2C400E2F599 /* UITeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD50DB152DF2C400E2F599 /* UITeamCell.m */; };
+		EEFD50E0152DF51600E2F599 /* UIPlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD50DF152DF51600E2F599 /* UIPlayerCell.m */; };
+		EEFD50EB152E248B00E2F599 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD50EA152E248B00E2F599 /* GameScore.m */; };
+		EEFD50EE152E261900E2F599 /* Round.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD50ED152E261800E2F599 /* Round.m */; };
+		EEFD50F3152E269000E2F599 /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD50F2152E269000E2F599 /* Shot.m */; };
+		EEFD5109152F936E00E2F599 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD5108152F936D00E2F599 /* NSString+MD5.m */; };
+		EEFD510D15312C1200E2F599 /* PlayerSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD510C15312C1200E2F599 /* PlayerSelectView.m */; };
+		EEFD5110153131D300E2F599 /* PlayerSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD510F153131D300E2F599 /* PlayerSelectVC.m */; };
+		EEFD511B1531832D00E2F599 /* PlayerDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD511A1531832D00E2F599 /* PlayerDetailVC.m */; };
+		EEFD511E15322C8B00E2F599 /* TeamDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD511D15322C8B00E2F599 /* TeamDetailVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +75,48 @@
 			remoteGlobalIDString = EE76B4E6152928D2007BD356;
 			remoteInfo = MLP;
 		};
+		EE76B52515293671007BD356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE76B51A15293671007BD356 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		EE76B52715293671007BD356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE76B51A15293671007BD356 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		EE76B52915293671007BD356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE76B51A15293671007BD356 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		EE76B52B15293671007BD356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE76B51A15293671007BD356 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		EE76B52D15293671007BD356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE76B51A15293671007BD356 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259C301615128079003066A2;
+			remoteInfo = RestKitResources;
+		};
+		EE76B52F15293717007BD356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE76B51A15293671007BD356 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -35,18 +124,97 @@
 		EE76B4EB152928D2007BD356 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EE76B4ED152928D2007BD356 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE76B4EF152928D2007BD356 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EE76B4F3152928D2007BD356 /* MLP-Info.plist */ = {isa = PBXFileReference; path = "MLP-Info.plist"; sourceTree = "<group>"; };
+		EE76B4F3152928D2007BD356 /* MLP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MLP-Info.plist"; sourceTree = "<group>"; };
 		EE76B4F5152928D2007BD356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EE76B4F7152928D2007BD356 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EE76B4F9152928D2007BD356 /* MLP-Prefix.pch */ = {isa = PBXFileReference; path = "MLP-Prefix.pch"; sourceTree = "<group>"; };
-		EE76B4FA152928D2007BD356 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE76B4F9152928D2007BD356 /* MLP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLP-Prefix.pch"; sourceTree = "<group>"; };
+		EE76B4FA152928D2007BD356 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE76B4FB152928D2007BD356 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EE76B502152928D2007BD356 /* MLPTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLPTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE76B503152928D2007BD356 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		EE76B50B152928D2007BD356 /* MLPTests-Info.plist */ = {isa = PBXFileReference; path = "MLPTests-Info.plist"; sourceTree = "<group>"; };
+		EE76B50B152928D2007BD356 /* MLPTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MLPTests-Info.plist"; sourceTree = "<group>"; };
 		EE76B50D152928D2007BD356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EE76B50F152928D2007BD356 /* MLPTests.h */ = {isa = PBXFileReference; path = MLPTests.h; sourceTree = "<group>"; };
+		EE76B50F152928D2007BD356 /* MLPTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPTests.h; sourceTree = "<group>"; };
 		EE76B510152928D2007BD356 /* MLPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPTests.m; sourceTree = "<group>"; };
+		EE76B51A15293671007BD356 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		EE76B5321529381D007BD356 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EE76B5331529381D007BD356 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EE76B5341529381D007BD356 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		EE76B5351529381D007BD356 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EE76B5361529381D007BD356 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EE76B5371529381D007BD356 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EE76B5381529381D007BD356 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EE76B5441529412B007BD356 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		EE76B54A152B3385007BD356 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		EE76B54B152B3385007BD356 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		EE76B551152B37FB007BD356 /* LeagueDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeagueDC.h; sourceTree = "<group>"; };
+		EE76B552152B37FB007BD356 /* LeagueDC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeagueDC.m; sourceTree = "<group>"; };
+		EE76B554152B3A03007BD356 /* League.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = League.h; sourceTree = "<group>"; };
+		EE76B555152B3A03007BD356 /* League.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = League.m; sourceTree = "<group>"; };
+		EE76B557152B4845007BD356 /* LeaguesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaguesVC.h; sourceTree = "<group>"; };
+		EE76B558152B4845007BD356 /* LeaguesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaguesVC.m; sourceTree = "<group>"; };
+		EE76B55D152B4BC5007BD356 /* Season.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Season.h; sourceTree = "<group>"; };
+		EE76B55E152B4BC5007BD356 /* Season.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Season.m; sourceTree = "<group>"; };
+		EE76B561152B4CB4007BD356 /* SeasonDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonDC.h; sourceTree = "<group>"; };
+		EE76B562152B4CB4007BD356 /* SeasonDC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonDC.m; sourceTree = "<group>"; };
+		EE76B564152B516E007BD356 /* SeasonsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonsVC.h; sourceTree = "<group>"; };
+		EE76B565152B516E007BD356 /* SeasonsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonsVC.m; sourceTree = "<group>"; };
+		EE76B568152B5865007BD356 /* 88-beer-mug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "88-beer-mug.png"; sourceTree = "<group>"; };
+		EE76B569152B5865007BD356 /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111-user.png"; sourceTree = "<group>"; };
+		EE76B56A152B5865007BD356 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		EE76B56F152B59A0007BD356 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		EE76B570152B59A0007BD356 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		EE76B573152B5A59007BD356 /* PlayerDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDC.h; sourceTree = "<group>"; };
+		EE76B574152B5A59007BD356 /* PlayerDC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDC.m; sourceTree = "<group>"; };
+		EE76B576152B5D4E007BD356 /* PlayersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersVC.h; sourceTree = "<group>"; };
+		EE76B577152B5D4E007BD356 /* PlayersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersVC.m; sourceTree = "<group>"; };
+		EE76B579152B6383007BD356 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		EE76B57A152B6383007BD356 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		EE76B57C152B661F007BD356 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		EE76B57D152B661F007BD356 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		EE76B57F152B6674007BD356 /* TeamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamPlayer.h; sourceTree = "<group>"; };
+		EE76B580152B6674007BD356 /* TeamPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamPlayer.m; sourceTree = "<group>"; };
+		EE76B583152B6C2D007BD356 /* TeamDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamDC.h; sourceTree = "<group>"; };
+		EE76B584152B6C2D007BD356 /* TeamDC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamDC.m; sourceTree = "<group>"; };
+		EE76B587152B6F85007BD356 /* TeamsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsVC.h; sourceTree = "<group>"; };
+		EE76B588152B6F85007BD356 /* TeamsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsVC.m; sourceTree = "<group>"; };
+		EE76B58B152D369E007BD356 /* GameDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDC.h; sourceTree = "<group>"; };
+		EE76B58C152D369E007BD356 /* GameDC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDC.m; sourceTree = "<group>"; };
+		EE76B58F152D5741007BD356 /* GamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesVC.h; sourceTree = "<group>"; };
+		EE76B590152D5741007BD356 /* GamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesVC.m; sourceTree = "<group>"; };
+		EE76B592152D6148007BD356 /* UIGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGameCell.h; sourceTree = "<group>"; };
+		EE76B593152D6148007BD356 /* UIGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGameCell.m; sourceTree = "<group>"; };
+		EE76B5C5152D6DBB007BD356 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		EE7C51201549E9DE00D62B61 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		EE803D04153CD9FB00B7A2FE /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
+		EE86ED72153F819200C5E55D /* PlayerReselectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerReselectVC.h; sourceTree = "<group>"; };
+		EE86ED73153F819200C5E55D /* PlayerReselectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerReselectVC.m; sourceTree = "<group>"; };
+		EE86ED76154081D100C5E55D /* PlayerTurnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTurnView.h; sourceTree = "<group>"; };
+		EE86ED77154081D100C5E55D /* PlayerTurnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTurnView.m; sourceTree = "<group>"; };
+		EEEB68B015490F4D002F6722 /* ScoreGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreGameVC.h; sourceTree = "<group>"; };
+		EEEB68B115490F4D002F6722 /* ScoreGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreGameVC.m; sourceTree = "<group>"; };
+		EEEB68B41549B397002F6722 /* WinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinnerView.h; sourceTree = "<group>"; };
+		EEEB68B51549B397002F6722 /* WinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinnerView.m; sourceTree = "<group>"; };
+		EEFD50DA152DF2C400E2F599 /* UITeamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITeamCell.h; sourceTree = "<group>"; };
+		EEFD50DB152DF2C400E2F599 /* UITeamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITeamCell.m; sourceTree = "<group>"; };
+		EEFD50DE152DF51600E2F599 /* UIPlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlayerCell.h; sourceTree = "<group>"; };
+		EEFD50DF152DF51600E2F599 /* UIPlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlayerCell.m; sourceTree = "<group>"; };
+		EEFD50E9152E248B00E2F599 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
+		EEFD50EA152E248B00E2F599 /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScore.m; sourceTree = "<group>"; };
+		EEFD50EC152E261800E2F599 /* Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Round.h; sourceTree = "<group>"; };
+		EEFD50ED152E261800E2F599 /* Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Round.m; sourceTree = "<group>"; };
+		EEFD50F1152E269000E2F599 /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		EEFD50F2152E269000E2F599 /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
+		EEFD5107152F936D00E2F599 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		EEFD5108152F936D00E2F599 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		EEFD510B15312C1200E2F599 /* PlayerSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectView.h; sourceTree = "<group>"; };
+		EEFD510C15312C1200E2F599 /* PlayerSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectView.m; sourceTree = "<group>"; };
+		EEFD510E153131D300E2F599 /* PlayerSelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectVC.h; sourceTree = "<group>"; };
+		EEFD510F153131D300E2F599 /* PlayerSelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectVC.m; sourceTree = "<group>"; };
+		EEFD51191531832D00E2F599 /* PlayerDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDetailVC.h; sourceTree = "<group>"; };
+		EEFD511A1531832D00E2F599 /* PlayerDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailVC.m; sourceTree = "<group>"; };
+		EEFD511C15322C8A00E2F599 /* TeamDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamDetailVC.h; sourceTree = "<group>"; };
+		EEFD511D15322C8B00E2F599 /* TeamDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamDetailVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +222,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE76B5C6152D6DBC007BD356 /* CoreText.framework in Frameworks */,
+				EE76B5391529381D007BD356 /* CFNetwork.framework in Frameworks */,
+				EE76B53A1529381D007BD356 /* CoreData.framework in Frameworks */,
+				EE76B53B1529381D007BD356 /* libxml2.dylib in Frameworks */,
+				EE76B53C1529381D007BD356 /* MobileCoreServices.framework in Frameworks */,
+				EE76B53D1529381D007BD356 /* QuartzCore.framework in Frameworks */,
+				EE76B53E1529381D007BD356 /* Security.framework in Frameworks */,
+				EE76B53F1529381D007BD356 /* SystemConfiguration.framework in Frameworks */,
+				EE76B53115293744007BD356 /* libRestKit.a in Frameworks */,
 				EE76B4EC152928D2007BD356 /* UIKit.framework in Frameworks */,
 				EE76B4EE152928D2007BD356 /* Foundation.framework in Frameworks */,
 				EE76B4F0152928D2007BD356 /* CoreGraphics.framework in Frameworks */,
@@ -76,7 +253,9 @@
 		EE76B4DC152928D2007BD356 = {
 			isa = PBXGroup;
 			children = (
+				EE76B51A15293671007BD356 /* RestKit.xcodeproj */,
 				EE76B4F1152928D2007BD356 /* MLP */,
+				EE76B4F2152928D2007BD356 /* Supporting Files */,
 				EE76B509152928D2007BD356 /* MLPTests */,
 				EE76B4EA152928D2007BD356 /* Frameworks */,
 				EE76B4E8152928D2007BD356 /* Products */,
@@ -95,10 +274,18 @@
 		EE76B4EA152928D2007BD356 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE76B5C5152D6DBB007BD356 /* CoreText.framework */,
+				EE76B5321529381D007BD356 /* CFNetwork.framework */,
+				EE76B5331529381D007BD356 /* CoreData.framework */,
+				EE76B5351529381D007BD356 /* MobileCoreServices.framework */,
+				EE76B5361529381D007BD356 /* QuartzCore.framework */,
+				EE76B5371529381D007BD356 /* Security.framework */,
+				EE76B5381529381D007BD356 /* SystemConfiguration.framework */,
 				EE76B4EB152928D2007BD356 /* UIKit.framework */,
 				EE76B4ED152928D2007BD356 /* Foundation.framework */,
 				EE76B4EF152928D2007BD356 /* CoreGraphics.framework */,
 				EE76B503152928D2007BD356 /* SenTestingKit.framework */,
+				EE76B5341529381D007BD356 /* libxml2.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,9 +293,9 @@
 		EE76B4F1152928D2007BD356 /* MLP */ = {
 			isa = PBXGroup;
 			children = (
-				EE76B4FA152928D2007BD356 /* AppDelegate.h */,
-				EE76B4FB152928D2007BD356 /* AppDelegate.m */,
-				EE76B4F2152928D2007BD356 /* Supporting Files */,
+				EE76B54215294100007BD356 /* Model */,
+				EE76B541152940FB007BD356 /* View */,
+				EE76B540152940F2007BD356 /* Controller */,
 			);
 			path = MLP;
 			sourceTree = "<group>";
@@ -116,12 +303,20 @@
 		EE76B4F2152928D2007BD356 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EE76B4F3152928D2007BD356 /* MLP-Info.plist */,
-				EE76B4F4152928D2007BD356 /* InfoPlist.strings */,
+				EE7C51201549E9DE00D62B61 /* icon.png */,
+				EE803D04153CD9FB00B7A2FE /* grey.png */,
+				EEFD5107152F936D00E2F599 /* NSString+MD5.h */,
+				EEFD5108152F936D00E2F599 /* NSString+MD5.m */,
 				EE76B4F7152928D2007BD356 /* main.m */,
+				EE76B4F3152928D2007BD356 /* MLP-Info.plist */,
+				EE76B568152B5865007BD356 /* 88-beer-mug.png */,
+				EE76B569152B5865007BD356 /* 111-user.png */,
+				EE76B56A152B5865007BD356 /* 112-group.png */,
+				EE76B4F4152928D2007BD356 /* InfoPlist.strings */,
 				EE76B4F9152928D2007BD356 /* MLP-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = MLP;
 			sourceTree = "<group>";
 		};
 		EE76B509152928D2007BD356 /* MLPTests */ = {
@@ -143,6 +338,360 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EE76B51B15293671007BD356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B52615293671007BD356 /* libRestKit.a */,
+				EE76B52815293671007BD356 /* RestKitTests.octest */,
+				EE76B52A15293671007BD356 /* RestKit.framework */,
+				EE76B52C15293671007BD356 /* RestKitFrameworkTests.octest */,
+				EE76B52E15293671007BD356 /* RestKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE76B540152940F2007BD356 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B54315294112007BD356 /* App */,
+				EE76B546152972C6007BD356 /* View */,
+				EE76B550152B37E1007BD356 /* Data */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EE76B541152940FB007BD356 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B5441529412B007BD356 /* Storyboard.storyboard */,
+				EE76B595152D617B007BD356 /* Cells */,
+				EEFD510A15312BEF00E2F599 /* PlayerSelect */,
+				EE86ED7515407C0300C5E55D /* PlayerTurn */,
+				EEEB68B31549B32C002F6722 /* WinnerView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EE76B54215294100007BD356 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD50E1152E23EA00E2F599 /* Game Scoring */,
+				EEFD50E2152E240500E2F599 /* League */,
+				EEFD50E3152E241100E2F599 /* Season */,
+				EEFD50E4152E241E00E2F599 /* Player */,
+				EEFD50E5152E243200E2F599 /* Team */,
+				EEFD50E7152E244E00E2F599 /* Game */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EE76B54315294112007BD356 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B4FA152928D2007BD356 /* AppDelegate.h */,
+				EE76B4FB152928D2007BD356 /* AppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		EE76B546152972C6007BD356 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B55A152B49A2007BD356 /* Login */,
+				EE76B55B152B49B2007BD356 /* Leagues */,
+				EE76B567152B5178007BD356 /* Seasons */,
+				EE76B56E152B597D007BD356 /* Players */,
+				EE76B586152B6F65007BD356 /* Teams */,
+				EE76B58E152D5721007BD356 /* Games */,
+				EEFD50F4152E3BCA00E2F599 /* Game Scoring */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EE76B550152B37E1007BD356 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B55C152B49C4007BD356 /* Leagues */,
+				EE76B560152B4CA5007BD356 /* Seasons */,
+				EE76B572152B5A3E007BD356 /* Players */,
+				EE76B582152B6C1D007BD356 /* Teams */,
+				EE76B58A152D360F007BD356 /* Games */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		EE76B55A152B49A2007BD356 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B54A152B3385007BD356 /* LoginVC.h */,
+				EE76B54B152B3385007BD356 /* LoginVC.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		EE76B55B152B49B2007BD356 /* Leagues */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B557152B4845007BD356 /* LeaguesVC.h */,
+				EE76B558152B4845007BD356 /* LeaguesVC.m */,
+			);
+			name = Leagues;
+			sourceTree = "<group>";
+		};
+		EE76B55C152B49C4007BD356 /* Leagues */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B551152B37FB007BD356 /* LeagueDC.h */,
+				EE76B552152B37FB007BD356 /* LeagueDC.m */,
+			);
+			name = Leagues;
+			sourceTree = "<group>";
+		};
+		EE76B560152B4CA5007BD356 /* Seasons */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B561152B4CB4007BD356 /* SeasonDC.h */,
+				EE76B562152B4CB4007BD356 /* SeasonDC.m */,
+			);
+			name = Seasons;
+			sourceTree = "<group>";
+		};
+		EE76B567152B5178007BD356 /* Seasons */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B564152B516E007BD356 /* SeasonsVC.h */,
+				EE76B565152B516E007BD356 /* SeasonsVC.m */,
+			);
+			name = Seasons;
+			sourceTree = "<group>";
+		};
+		EE76B56E152B597D007BD356 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B576152B5D4E007BD356 /* PlayersVC.h */,
+				EE76B577152B5D4E007BD356 /* PlayersVC.m */,
+				EEFD51191531832D00E2F599 /* PlayerDetailVC.h */,
+				EEFD511A1531832D00E2F599 /* PlayerDetailVC.m */,
+			);
+			name = Players;
+			sourceTree = "<group>";
+		};
+		EE76B572152B5A3E007BD356 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B573152B5A59007BD356 /* PlayerDC.h */,
+				EE76B574152B5A59007BD356 /* PlayerDC.m */,
+			);
+			name = Players;
+			sourceTree = "<group>";
+		};
+		EE76B582152B6C1D007BD356 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B583152B6C2D007BD356 /* TeamDC.h */,
+				EE76B584152B6C2D007BD356 /* TeamDC.m */,
+			);
+			name = Teams;
+			sourceTree = "<group>";
+		};
+		EE76B586152B6F65007BD356 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B587152B6F85007BD356 /* TeamsVC.h */,
+				EE76B588152B6F85007BD356 /* TeamsVC.m */,
+				EEFD511C15322C8A00E2F599 /* TeamDetailVC.h */,
+				EEFD511D15322C8B00E2F599 /* TeamDetailVC.m */,
+			);
+			name = Teams;
+			sourceTree = "<group>";
+		};
+		EE76B58A152D360F007BD356 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B58B152D369E007BD356 /* GameDC.h */,
+				EE76B58C152D369E007BD356 /* GameDC.m */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
+		EE76B58E152D5721007BD356 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B58F152D5741007BD356 /* GamesVC.h */,
+				EE76B590152D5741007BD356 /* GamesVC.m */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
+		EE76B595152D617B007BD356 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD50DD152DF50900E2F599 /* PlayerCell */,
+				EEFD50D6152DF21A00E2F599 /* TeamCell */,
+				EEFD50D5152DF20500E2F599 /* GameCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		EE86ED7515407C0300C5E55D /* PlayerTurn */ = {
+			isa = PBXGroup;
+			children = (
+				EE86ED76154081D100C5E55D /* PlayerTurnView.h */,
+				EE86ED77154081D100C5E55D /* PlayerTurnView.m */,
+			);
+			name = PlayerTurn;
+			sourceTree = "<group>";
+		};
+		EEEB68B31549B32C002F6722 /* WinnerView */ = {
+			isa = PBXGroup;
+			children = (
+				EEEB68B41549B397002F6722 /* WinnerView.h */,
+				EEEB68B51549B397002F6722 /* WinnerView.m */,
+			);
+			name = WinnerView;
+			sourceTree = "<group>";
+		};
+		EEFD50D5152DF20500E2F599 /* GameCell */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B592152D6148007BD356 /* UIGameCell.h */,
+				EE76B593152D6148007BD356 /* UIGameCell.m */,
+			);
+			name = GameCell;
+			sourceTree = "<group>";
+		};
+		EEFD50D6152DF21A00E2F599 /* TeamCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD50DA152DF2C400E2F599 /* UITeamCell.h */,
+				EEFD50DB152DF2C400E2F599 /* UITeamCell.m */,
+			);
+			name = TeamCell;
+			sourceTree = "<group>";
+		};
+		EEFD50DD152DF50900E2F599 /* PlayerCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD50DE152DF51600E2F599 /* UIPlayerCell.h */,
+				EEFD50DF152DF51600E2F599 /* UIPlayerCell.m */,
+			);
+			name = PlayerCell;
+			sourceTree = "<group>";
+		};
+		EEFD50E1152E23EA00E2F599 /* Game Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD50E8152E246100E2F599 /* GameScore */,
+				EEFD50EF152E261D00E2F599 /* Round */,
+				EEFD50F0152E268400E2F599 /* Shot */,
+			);
+			name = "Game Scoring";
+			sourceTree = "<group>";
+		};
+		EEFD50E2152E240500E2F599 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B554152B3A03007BD356 /* League.h */,
+				EE76B555152B3A03007BD356 /* League.m */,
+			);
+			name = League;
+			sourceTree = "<group>";
+		};
+		EEFD50E3152E241100E2F599 /* Season */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B55D152B4BC5007BD356 /* Season.h */,
+				EE76B55E152B4BC5007BD356 /* Season.m */,
+			);
+			name = Season;
+			sourceTree = "<group>";
+		};
+		EEFD50E4152E241E00E2F599 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B56F152B59A0007BD356 /* Player.h */,
+				EE76B570152B59A0007BD356 /* Player.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		EEFD50E5152E243200E2F599 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD50E6152E243D00E2F599 /* TeamPlayer */,
+				EE76B57C152B661F007BD356 /* Team.h */,
+				EE76B57D152B661F007BD356 /* Team.m */,
+			);
+			name = Team;
+			sourceTree = "<group>";
+		};
+		EEFD50E6152E243D00E2F599 /* TeamPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B57F152B6674007BD356 /* TeamPlayer.h */,
+				EE76B580152B6674007BD356 /* TeamPlayer.m */,
+			);
+			name = TeamPlayer;
+			sourceTree = "<group>";
+		};
+		EEFD50E7152E244E00E2F599 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				EE76B579152B6383007BD356 /* Game.h */,
+				EE76B57A152B6383007BD356 /* Game.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		EEFD50E8152E246100E2F599 /* GameScore */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD50E9152E248B00E2F599 /* GameScore.h */,
+				EEFD50EA152E248B00E2F599 /* GameScore.m */,
+			);
+			name = GameScore;
+			sourceTree = "<group>";
+		};
+		EEFD50EF152E261D00E2F599 /* Round */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD50EC152E261800E2F599 /* Round.h */,
+				EEFD50ED152E261800E2F599 /* Round.m */,
+			);
+			name = Round;
+			sourceTree = "<group>";
+		};
+		EEFD50F0152E268400E2F599 /* Shot */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD50F1152E269000E2F599 /* Shot.h */,
+				EEFD50F2152E269000E2F599 /* Shot.m */,
+			);
+			name = Shot;
+			sourceTree = "<group>";
+		};
+		EEFD50F4152E3BCA00E2F599 /* Game Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD510E153131D300E2F599 /* PlayerSelectVC.h */,
+				EEFD510F153131D300E2F599 /* PlayerSelectVC.m */,
+				EE86ED72153F819200C5E55D /* PlayerReselectVC.h */,
+				EE86ED73153F819200C5E55D /* PlayerReselectVC.m */,
+				EEEB68B015490F4D002F6722 /* ScoreGameVC.h */,
+				EEEB68B115490F4D002F6722 /* ScoreGameVC.m */,
+			);
+			name = "Game Scoring";
+			sourceTree = "<group>";
+		};
+		EEFD510A15312BEF00E2F599 /* PlayerSelect */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD510B15312C1200E2F599 /* PlayerSelectView.h */,
+				EEFD510C15312C1200E2F599 /* PlayerSelectView.m */,
+			);
+			name = PlayerSelect;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +706,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EE76B53015293717007BD356 /* PBXTargetDependency */,
 			);
 			name = MLP;
 			productName = MLP;
@@ -201,6 +751,12 @@
 			mainGroup = EE76B4DC152928D2007BD356;
 			productRefGroup = EE76B4E8152928D2007BD356 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EE76B51B15293671007BD356 /* Products */;
+					ProjectRef = EE76B51A15293671007BD356 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EE76B4E6152928D2007BD356 /* MLP */,
@@ -209,12 +765,56 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		EE76B52615293671007BD356 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = EE76B52515293671007BD356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EE76B52815293671007BD356 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = EE76B52715293671007BD356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EE76B52A15293671007BD356 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = EE76B52915293671007BD356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EE76B52C15293671007BD356 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = EE76B52B15293671007BD356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EE76B52E15293671007BD356 /* RestKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitResources.bundle;
+			remoteRef = EE76B52D15293671007BD356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		EE76B4E5152928D2007BD356 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EE76B4F6152928D2007BD356 /* InfoPlist.strings in Resources */,
+				EE76B5451529412B007BD356 /* Storyboard.storyboard in Resources */,
+				EE76B56B152B5865007BD356 /* 88-beer-mug.png in Resources */,
+				EE76B56C152B5865007BD356 /* 111-user.png in Resources */,
+				EE76B56D152B5865007BD356 /* 112-group.png in Resources */,
+				EE803D05153CD9FB00B7A2FE /* grey.png in Resources */,
+				EE7C51211549E9DE00D62B61 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +851,38 @@
 			files = (
 				EE76B4F8152928D2007BD356 /* main.m in Sources */,
 				EE76B4FC152928D2007BD356 /* AppDelegate.m in Sources */,
+				EE76B54C152B3385007BD356 /* LoginVC.m in Sources */,
+				EE76B553152B37FB007BD356 /* LeagueDC.m in Sources */,
+				EE76B556152B3A03007BD356 /* League.m in Sources */,
+				EE76B559152B4845007BD356 /* LeaguesVC.m in Sources */,
+				EE76B55F152B4BC5007BD356 /* Season.m in Sources */,
+				EE76B563152B4CB4007BD356 /* SeasonDC.m in Sources */,
+				EE76B566152B516E007BD356 /* SeasonsVC.m in Sources */,
+				EE76B571152B59A1007BD356 /* Player.m in Sources */,
+				EE76B575152B5A59007BD356 /* PlayerDC.m in Sources */,
+				EE76B578152B5D4E007BD356 /* PlayersVC.m in Sources */,
+				EE76B57B152B6383007BD356 /* Game.m in Sources */,
+				EE76B57E152B6620007BD356 /* Team.m in Sources */,
+				EE76B581152B6674007BD356 /* TeamPlayer.m in Sources */,
+				EE76B585152B6C2D007BD356 /* TeamDC.m in Sources */,
+				EE76B589152B6F85007BD356 /* TeamsVC.m in Sources */,
+				EE76B58D152D369E007BD356 /* GameDC.m in Sources */,
+				EE76B591152D5741007BD356 /* GamesVC.m in Sources */,
+				EE76B594152D6148007BD356 /* UIGameCell.m in Sources */,
+				EEFD50DC152DF2C400E2F599 /* UITeamCell.m in Sources */,
+				EEFD50E0152DF51600E2F599 /* UIPlayerCell.m in Sources */,
+				EEFD50EB152E248B00E2F599 /* GameScore.m in Sources */,
+				EEFD50EE152E261900E2F599 /* Round.m in Sources */,
+				EEFD50F3152E269000E2F599 /* Shot.m in Sources */,
+				EEFD5109152F936E00E2F599 /* NSString+MD5.m in Sources */,
+				EEFD510D15312C1200E2F599 /* PlayerSelectView.m in Sources */,
+				EEFD5110153131D300E2F599 /* PlayerSelectVC.m in Sources */,
+				EEFD511B1531832D00E2F599 /* PlayerDetailVC.m in Sources */,
+				EEFD511E15322C8B00E2F599 /* TeamDetailVC.m in Sources */,
+				EE86ED74153F819200C5E55D /* PlayerReselectVC.m in Sources */,
+				EE86ED78154081D100C5E55D /* PlayerTurnView.m in Sources */,
+				EEEB68B215490F4D002F6722 /* ScoreGameVC.m in Sources */,
+				EEEB68B61549B397002F6722 /* WinnerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +901,11 @@
 			isa = PBXTargetDependency;
 			target = EE76B4E6152928D2007BD356 /* MLP */;
 			targetProxy = EE76B507152928D2007BD356 /* PBXContainerItemProxy */;
+		};
+		EE76B53015293717007BD356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = EE76B52F15293717007BD356 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -344,7 +981,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MLP/MLP-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "MLP/MLP-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -355,7 +997,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MLP/MLP-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "MLP/MLP-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,6 +1061,7 @@
 				EE76B516152928D2007BD356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE76B517152928D2007BD356 /* Build configuration list for PBXNativeTarget "MLPTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +1070,7 @@
 				EE76B519152928D2007BD356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
