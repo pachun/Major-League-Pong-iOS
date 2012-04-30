@@ -20,6 +20,7 @@
 #import "League.h"
 #import "Player.h"
 #import "GameScore.h"
+#import "MBProgressHUD.h"
 
 // View Imports
 #import "WinnerView.h"
@@ -43,8 +44,8 @@
 - (void)reportScore;
 - (void)doneGame;
 - (void)updateNavBar;
-- (void)shooter:(Player*)shooter didHitACup:(BOOL)didHit;
-- (void)updateViewForShooter:(Player *)shooter withCupHit:(BOOL)didHit;
+- (void)HUDWithMessage:(NSString *)message;
+- (void)shooterView:(PlayerTurnView*)shooterView didHitACup:(BOOL)didHit;
 @end
 
 @implementation ScoreGameVC
@@ -329,7 +330,8 @@
         self.navigationItem.title = [NSString stringWithFormat:@"%@ : %i / 10", shootingTeam, (10-_awayTeamCupHits)];
 }
 
-- (void)shooter:(Player*)shooter didHitACup:(BOOL)didHit {
+- (void)shooterView:(PlayerTurnView*)shooterView didHitACup:(BOOL)didHit {
+    Player *shooter = shooterView.player;
     
     // Create a shot
     Shot *shot = [Shot new];
@@ -367,26 +369,19 @@
     // Update the round's shot count
     _shotInRound++;
     
-    // If necessary, prepare for a new round
+    // If necessary, prepare for a new round, checking for bring backs
     if(_shotInRound == 6) {
-        
-        if([_score bringBacks]) {
-            
-            [self prepareForRoundWithBringBacks];
-            
-        } else [self prepareForRound];
-        
+        if([_score bringBacks]) [self prepareForRoundWithBringBacks];
+        else [self prepareForRound];
     }
     
-    // If necessary, prepare for a new turn
+    // If necessary, prepare for a new turn, checking for bring backs
     else if(_shotInRound == 3) {
-        
         if([_score bringBacks]) {
-            
-            // Replace this with prepareForTurnWithBringBacks
             [self prepareForTurnWithBringBacks];
-            
-        } else [self prepareForTurn];
+            [self HUDWithMessage:@"Bring 'em Back!"];
+        }
+        else [self prepareForTurn];
     }
 }
 
@@ -404,19 +399,23 @@
                 if(!didHit) [ptv.cupLabel setText:@"-"];
                 else [ptv.cupLabel setText:[NSString stringWithFormat:@"%i", _awayTeamCupHits]];
             
+            // Switch background color
+            [ptv setBackgroundColor:[UIColor blackColor]];
+            
+            // Change the player's name to a white color
+            for(PlayerTurnView *ptv in _playerTurnViews)
+                if(ptv.player == shooter)
+                    ptv.nameLabel.textColor = [UIColor whiteColor];
+            
             // Show/hide relevant turn view components
             [ptv.hitButton setHidden:YES];
             [ptv.missButton setHidden:YES];
             [ptv.undoButton setHidden:NO];
             [ptv.cupLabel setHidden:NO];
             
-            // Change the player's name to a white color
-            for(PlayerTurnView *ptv in _playerTurnViews)
-                if(ptv.player == shooter)
-                    ptv.nameLabel.textColor = [UIColor whiteColor];
-             
-            // Switch background color
-            [ptv setBackgroundColor:[UIColor blackColor]];
+            // If this shot index is divisible by 3... (0 counts, so add 1)
+            if((_shotInRound+1)%3 ==0)
+                [ptv flashLabel];
         }
 }
 
@@ -428,13 +427,13 @@
 
 # pragma mark - PlayerTurnView Delegate Methods
 
-- (void)cupHitBy:(Player *)p inView:(PlayerTurnView *)view {
-    [self shooter:p didHitACup:YES];
+- (void)cupHitInView:(PlayerTurnView *)view {
+    [self shooterView:view didHitACup:YES];
     [self updateNavBar];
 }
 
-- (void)cupMissedBy:(Player *)p inView:(PlayerTurnView *)view {
-    [self shooter:p didHitACup:NO];
+- (void)cupMissedInView:(PlayerTurnView *)view {
+    [self shooterView:view didHitACup:NO];
 }
 
 - (void)undoTappedForPlayerView:(PlayerTurnView *)view {
@@ -470,6 +469,7 @@
         
         // Fix the view
         [view setBackgroundColor:[UIColor whiteColor]];
+        [view.nameLabel setTextColor:[UIColor blackColor]];
         [view.hitButton setHidden:NO];
         [view.missButton setHidden:NO];
         [view.undoButton setHidden:YES];
@@ -480,10 +480,24 @@
         
     } else {
         NSLog(@"You can't undo that!!!");
-        // You can't do this operation! popup (using MBProgressHUD)
-        int hello = 5;
-        hello++;
+        
+        // You can't do this operation! popup
+        [self HUDWithMessage:@"Wasn't the last shot!"];
     }
+}
+
+- (void)HUDWithMessage:(NSString *)message {
+    
+    // Create a smooth popup with the message
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    //[hud setMode:MBProgressHUDModeAnnularDeterminate];
+    [hud setLabelText:message];
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 0.01 * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [NSThread sleepForTimeInterval:1];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
 }
 
 @end

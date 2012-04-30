@@ -15,6 +15,8 @@
 // Properties
 @property int selected;
 @property(copy, nonatomic)NSMutableArray *games;
+@property(copy, nonatomic)NSMutableArray *scored;
+@property(copy, nonatomic)NSMutableArray *unscored;
 @property(strong, nonatomic)RKObjectMapping *mapping;
 
 // Class Methods
@@ -27,5 +29,7 @@
 - (void)loadGames;
 - (Game *)selectedGame;
 - (Game *)gameAtIndex:(int)index;
+- (Game *)scoredGameAtIndex:(int)index;
+- (Game *)unscoredGameAtIndex:(int)index;
 
 @end

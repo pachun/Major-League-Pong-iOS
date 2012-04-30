@@ -22,4 +22,5 @@
 - (IBAction)cupHit;
 - (IBAction)cupMissed;
 - (IBAction)undoTapped;
+- (void)flashLabel;
 @end

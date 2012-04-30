@@ -861,7 +861,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Games" image="88-beer-mug.png" id="8PG-ts-T3z"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="3hj-ty-I6M"/>
+                    <navigationItem key="navigationItem" id="3hj-ty-I6M">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="5Df-Th-g5j" kind="modal" identifier="TeamSelectSegue" id="DVT-MP-aGt"/>
                     </connections>
@@ -1036,7 +1038,7 @@
             </objects>
             <point key="canvasLocation" x="3314" y="722"/>
         </scene>
-        <!--Score GameVC - 10 / 10-->
+        <!--Score GameVC - Catcher in the Eye : 10 / 10-->
         <scene sceneID="vmb-mO-KhO">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7J-Pn-Fqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1307,7 +1309,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" title="10 / 10" id="zPb-9T-NHO"/>
+                    <navigationItem key="navigationItem" title="Catcher in the Eye : 10 / 10" id="zPb-9T-NHO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="player1TurnView" destination="HJs-dD-Clk" id="laP-V6-nDC"/>
                         <outlet property="player2TurnView" destination="sws-ri-LIB" id="RiB-1M-FZt"/>
@@ -1508,6 +1511,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jge-ah-2q4"/>
+        <segue reference="3cY-f8-YKz"/>
     </inferredMetricsTieBreakers>
 </document>

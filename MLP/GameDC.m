@@ -19,6 +19,8 @@
 #pragma mark - Accessor Synthesizers
 
 @synthesize games = _games;
+@synthesize scored = _scored;
+@synthesize unscored = _unscored;
 @synthesize selected = _selected;
 @synthesize mapping = _mapping;
 
@@ -47,7 +49,7 @@ static GameDC *sharedInstance;
         [self.mapping mapKeyPath:@"league_id" toAttribute:@"league_identifier"];
         [self.mapping mapKeyPath:@"season_id" toAttribute:@"season_identifier"];
         [self.mapping mapKeyPath:@"rounds_count" toAttribute:@"rounds_count"];
-        //[self.mapping mapKeyPath:@"winner_id" toAttribute:@"winner_id"];
+        [self.mapping mapKeyPath:@"winner_id" toAttribute:@"winner_id"];
         [self.mapping mapKeyPath:@"url" toAttribute:@"path"];
         [self.mapping mapKeyPath:@"date" toAttribute:@"date"];
         [self.mapping mapKeyPath:@"time" toAttribute:@"time"];
@@ -83,6 +85,18 @@ static GameDC *sharedInstance;
     else return nil;
 }
 
+- (Game *)scoredGameAtIndex:(int)index {
+    if(index >= 0 && index < [_scored count])
+        return [_scored objectAtIndex:index];
+    else return nil;
+}
+
+- (Game *)unscoredGameAtIndex:(int)index {
+    if(index >= 0 && index < [_unscored count])
+        return [_unscored objectAtIndex:index];
+    else return nil;
+}
+
 - (void)loadGames {
     
     // Authenticate & use mapping to load objects
@@ -100,8 +114,11 @@ static GameDC *sharedInstance;
     
     // Populate the local array with the returned objects
     _games = [[NSMutableArray alloc] init];
-    for(Game *g in objects)
-        [self.games addObject:g];
+    for(Game *g in objects) {
+        [_games addObject:g];
+        if(g.winner_id) [_scored addObject:g];
+        else [_unscored addObject:g];
+    }
     
     // Sort the games according to their date / times
     [self sort];

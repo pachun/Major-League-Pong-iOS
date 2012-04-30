@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE3FF35B154E4D3800DE398F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7C5130154A0E9300D62B61 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EE76B4EC152928D2007BD356 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B4EB152928D2007BD356 /* UIKit.framework */; };
 		EE76B4EE152928D2007BD356 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B4ED152928D2007BD356 /* Foundation.framework */; };
 		EE76B4F0152928D2007BD356 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B4EF152928D2007BD356 /* CoreGraphics.framework */; };
@@ -862,6 +863,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3FF35B154E4D3800DE398F /* MBProgressHUD.m in Sources */,
 				EE76B4F8152928D2007BD356 /* main.m in Sources */,
 				EE76B4FC152928D2007BD356 /* AppDelegate.m in Sources */,
 				EE76B54C152B3385007BD356 /* LoginVC.m in Sources */,

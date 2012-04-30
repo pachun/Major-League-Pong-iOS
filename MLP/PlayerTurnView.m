@@ -34,16 +34,51 @@
     self.playerGravatar.image = [UIImage imageWithData:[player gravatar]];
 }
 
+# pragma mark - Instance Methods
+
+- (void)flashLabel {
+    NSLog(@"Flashing cup indicator!");
+    
+    // (1) Show for .4 seconds
+    // (2) hide for .2
+    // (3) show for .2
+    // (4) repeat 2 & 3
+    [UIView animateWithDuration:0.4 
+                          delay:.4 
+                        options:kNilOptions 
+                     animations:^{
+                         [_cupLabel setHidden:YES];
+                     } 
+                     completion:^(BOOL finished) { NSLog(@"Done!"); }];
+    
+    for(int i = 0; i < 2; i++) {
+        [UIView animateWithDuration:0.2 
+                              delay:.2 
+                            options:kNilOptions 
+                         animations:^{
+                             [_cupLabel setHidden:NO];
+                         } 
+                         completion:^(BOOL finished) { NSLog(@"Done!"); }];
+        [UIView animateWithDuration:0.2 
+                              delay:.2 
+                            options:kNilOptions 
+                         animations:^{
+                             [_cupLabel setHidden:YES];
+                         } 
+                         completion:^(BOOL finished) { NSLog(@"Done!"); }];
+    }
+}
+
 # pragma mark - Interface Actions
 
 - (IBAction)cupHit {
     ScoreGameVC *score = (ScoreGameVC *)_delegate;
-    [score cupHitBy:_player inView:self];
+    [score cupHitInView:self];
 }
 
 - (IBAction)cupMissed {
     ScoreGameVC *score = (ScoreGameVC *)_delegate;
-    [score cupMissedBy:_player inView:self];
+    [score cupMissedInView:self];
 }
 
 - (IBAction)undoTapped {
