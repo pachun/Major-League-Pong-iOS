@@ -44,6 +44,7 @@
 - (void)reportScore;
 - (void)doneGame;
 - (void)updateNavBar;
+- (void)updateUndos;
 - (void)HUDWithMessage:(NSString *)message;
 - (void)shooterView:(PlayerTurnView*)shooterView didHitACup:(BOOL)didHit;
 @end
@@ -330,6 +331,13 @@
         self.navigationItem.title = [NSString stringWithFormat:@"%@ : %i / 10", shootingTeam, (10-_awayTeamCupHits)];
 }
 
+- (void)updateUndos {
+    for(PlayerTurnView *ptv in _playerTurnViews)
+        if(ptv.player.identifier == ((Shot*)[((Round*)[_score.roundsAttributes lastObject]).shots lastObject]).playerIdentifier)
+            [ptv.undoButton setHidden:NO];
+        else [ptv.undoButton setHidden:YES];
+}
+
 - (void)shooterView:(PlayerTurnView*)shooterView didHitACup:(BOOL)didHit {
     Player *shooter = shooterView.player;
     
@@ -410,8 +418,8 @@
             // Show/hide relevant turn view components
             [ptv.hitButton setHidden:YES];
             [ptv.missButton setHidden:YES];
-            [ptv.undoButton setHidden:NO];
             [ptv.cupLabel setHidden:NO];
+            [self updateUndos];
             
             // If this shot index is divisible by 3... (0 counts, so add 1)
             if((_shotInRound+1)%3 ==0)
@@ -472,14 +480,13 @@
         [view.nameLabel setTextColor:[UIColor blackColor]];
         [view.hitButton setHidden:NO];
         [view.missButton setHidden:NO];
-        [view.undoButton setHidden:YES];
         [view.cupLabel setHidden:YES];
+        [self updateUndos];
         
         // Update the nav bar to reflect the change
         [self updateNavBar];
         
     } else {
-        NSLog(@"You can't undo that!!!");
         
         // You can't do this operation! popup
         [self HUDWithMessage:@"Wasn't the last shot!"];
@@ -490,7 +497,7 @@
     
     // Create a smooth popup with the message
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    //[hud setMode:MBProgressHUDModeAnnularDeterminate];
+    [hud setMode:MBProgressHUDModeCustomView];
     [hud setLabelText:message];
     
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 0.01 * NSEC_PER_SEC);

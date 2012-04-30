@@ -18,6 +18,8 @@
 
 #import "SeasonsVC.h"
 
+#import "MBProgressHUD.h"
+
 @interface SeasonsVC ()
 - (void)seguePart1;
 - (void)seguePart2;
@@ -85,13 +87,22 @@
     //  (2) Load Teams
     //  (3) Load Games
     
-    // Load players for selected season and then segue
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(seguePart1) 
-                                                 name:@"PlayersLoaded" 
-                                               object:[PlayerDC sharedInstance]];
-    [[SeasonDC sharedInstance] setSelected:indexPath.row];
-    [[PlayerDC sharedInstance] loadPlayers];
+    // Create a smooth popup with the message
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    //[hud setMode:MBProgressHUDModeAnnularDeterminate];
+    [hud setLabelText:@"Loading Season"];
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 0.01 * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        
+        // Load players for selected season and then segue
+        [[NSNotificationCenter defaultCenter] addObserver:self 
+                                                 selector:@selector(seguePart1) 
+                                                     name:@"PlayersLoaded" 
+                                                   object:[PlayerDC sharedInstance]];
+        [[SeasonDC sharedInstance] setSelected:indexPath.row];
+        [[PlayerDC sharedInstance] loadPlayers];
+    });
 }
 
 # pragma mark - Private Methods
@@ -123,6 +134,9 @@
 }
 
 - (void)seguePart3 {
+    
+    // Hide the progress indicator
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
     // Segue
     [[NSNotificationCenter defaultCenter] removeObserver:self];
