@@ -27,6 +27,7 @@
 @property int awayTeamCupHits;
 @property int shootingTeamIdentifier;
 
+- (void)undoTappedForPlayerView:(PlayerTurnView *)view;
 - (void)cupHitBy:(Player *)p inView:(PlayerTurnView *)view;
 - (void)cupMissedBy:(Player *)p inView:(PlayerTurnView *)view;
 @end

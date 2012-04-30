@@ -27,6 +27,7 @@
 
 // Controller Imports
 #import "GameDC.h"
+#import "TeamDC.h"
 #import "PlayerDC.h"
 #import "SeasonDC.h"
 #import "LeagueDC.h"
@@ -36,10 +37,12 @@
 - (void)prepareForGame;
 - (void)prepareForRound;
 - (void)prepareForTurn;
+- (void)prepareForRoundWithBringBacks;
+- (void)prepareForTurnWithBringBacks;
 - (void)checkForWinner;
 - (void)reportScore;
 - (void)doneGame;
-- (void)updateHitCounter;
+- (void)updateNavBar;
 - (void)shooter:(Player*)shooter didHitACup:(BOOL)didHit;
 - (void)updateViewForShooter:(Player *)shooter withCupHit:(BOOL)didHit;
 @end
@@ -179,9 +182,15 @@
 }
 
 - (void)prepareForTurn {
+
+    // Switch shooting team ID (if not round 1 w/ 0 shots; preset for me)
+    if([_score.roundsAttributes count]!=1 || _shotInRound != 0)
+        _shootingTeamIdentifier = _shootingTeamIdentifier == _score.homeTeamIdentifier ?
+                                  _score.awayTeamIdentifier:
+                                  _score.homeTeamIdentifier;
     
-    // Update title to reflect current teams cup hit count
-    [self updateHitCounter];
+    // Update nav bar title to reflect current teams cup hit count
+    [self updateNavBar];
     
     // Set the player gravatars and names
     int index = 0;
@@ -205,6 +214,75 @@
         [ptv.undoButton setHidden:YES];
         [ptv.cupLabel setHidden:YES];
     }
+}
+
+- (void)prepareForRoundWithBringBacks {
+    
+    // Set up round metadata
+    _shotInRound = 0;
+    _roundCount++;
+    
+    // Add a round to the score object
+    [_score addRound];
+    
+    // Switch the shooting team
+    //   (prepareForTurn will undo this causing the same team to be up)
+    //   (this must be before adjustments so the opposing team gets the dummy shot punishment)
+    _shootingTeamIdentifier = _shootingTeamIdentifier == _score.homeTeamIdentifier ?
+    _score.awayTeamIdentifier:
+    _score.homeTeamIdentifier;
+    
+    // Add 3 dummy shots to the beginning of this round
+    for(int i = 0; i < 3; i++) {
+        Shot *dummyShot = [Shot new];
+        dummyShot.leagueIdentifier = [[LeagueDC sharedInstance] selectedLeague].identifier;
+        dummyShot.seasonIdentifier = [[SeasonDC sharedInstance] selectedSeason].identifier;
+        dummyShot.teamIdentifier = _shootingTeamIdentifier;
+        dummyShot.playerIdentifier = -1;
+        dummyShot.cup = -1;
+        [((Round *)[_score.roundsAttributes lastObject]).shots addObject:dummyShot];
+        _shotInRound++;
+    }
+    
+    // Switch the shooting team again
+    _shootingTeamIdentifier = _shootingTeamIdentifier == _score.homeTeamIdentifier ?
+    _score.awayTeamIdentifier:
+    _score.homeTeamIdentifier;
+    
+    // Ensure correct view components are displayed/hidden
+    for(PlayerTurnView *ptv in _playerTurnViews) {
+        [ptv setBackgroundColor:[UIColor whiteColor]];
+        [ptv.hitButton setHidden:NO];
+        [ptv.missButton setHidden:NO];
+        [ptv.undoButton setHidden:YES];
+        [ptv.cupLabel setHidden:YES];
+    }
+    
+}
+
+- (void)prepareForTurnWithBringBacks {
+    
+    // Switch the shooting team
+    //   (prepareForTurn will undo this causing the same team to be up)
+    //   (this must be before adjustments so the opposing team gets the dummy shot punishment)
+    _shootingTeamIdentifier = _shootingTeamIdentifier == _score.homeTeamIdentifier ?
+    _score.awayTeamIdentifier:
+    _score.homeTeamIdentifier;
+    
+    // Add 3 dummy shots to the end of this round
+    for(int i = 0; i < 3; i++) {
+        Shot *dummyShot = [Shot new];
+        dummyShot.leagueIdentifier = [[LeagueDC sharedInstance] selectedLeague].identifier;
+        dummyShot.seasonIdentifier = [[SeasonDC sharedInstance] selectedSeason].identifier;
+        dummyShot.teamIdentifier = _shootingTeamIdentifier;
+        dummyShot.playerIdentifier = -1;
+        dummyShot.cup = -1;
+        [((Round *)[_score.roundsAttributes lastObject]).shots addObject:dummyShot];
+        _shotInRound++;
+    }
+    
+    // Start a new round (preparing for this round will switch back the shooting team ID to the balls back team)
+    [self prepareForRound];
 }
 
 - (void)checkForWinner {
@@ -236,12 +314,19 @@
     [[RKObjectManager sharedManager] postObject:_score delegate:self];
 }
 
-// Reset title to indicate cups remaining (not hit yet)
-- (void)updateHitCounter {
+// Reset title to indicate a team and their respective remaining cups
+- (void)updateNavBar {
+    
+    // Get shooting teams name
+    NSString *shootingTeam = _shootingTeamIdentifier == _score.homeTeamIdentifier ?
+    [[TeamDC sharedInstance] teamWithIdentifier:_score.homeTeamIdentifier].name: 
+    [[TeamDC sharedInstance] teamWithIdentifier:_score.awayTeamIdentifier].name;
+    
+    // Update navbar title to include team name and cups remaining
     if(_shootingTeamIdentifier == _score.homeTeamIdentifier)
-        self.navigationItem.title = [NSString stringWithFormat:@"%i / 10", (10-_homeTeamCupHits)];
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ : %i / 10", shootingTeam, (10-_homeTeamCupHits)];
     else
-        self.navigationItem.title = [NSString stringWithFormat:@"%i / 10", (10-_awayTeamCupHits)];
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ : %i / 10", shootingTeam, (10-_awayTeamCupHits)];
 }
 
 - (void)shooter:(Player*)shooter didHitACup:(BOOL)didHit {
@@ -258,11 +343,15 @@
     // Set shot index and cup
     shot.shotNumberInRound = _shotInRound;
     if(_shootingTeamIdentifier == _score.homeTeamIdentifier) {
-        if(didHit) _homeTeamCupHits++;
-        shot.cup = _homeTeamCupHits;
+        if(didHit) {
+            _homeTeamCupHits++;
+            shot.cup = _homeTeamCupHits;
+        } else shot.cup = 0;
     } else {
-        if(didHit) _awayTeamCupHits++;
-        shot.cup = _awayTeamCupHits;
+        if(didHit) {
+            _awayTeamCupHits++;
+            shot.cup = _awayTeamCupHits;
+        } else shot.cup = 0;
     }
     
     // Check for a winner!
@@ -270,6 +359,7 @@
     
     // Add the shot to the game data structure
     [((Round *)[_score.roundsAttributes lastObject]).shots addObject:shot];
+    NSLog(@"Added shot to DS: %i", ((Shot*)[((Round *)[_score.roundsAttributes lastObject]).shots lastObject]).cup);
     
     // Update the view to reflect hit or miss
     [self updateViewForShooter:shooter withCupHit:didHit];
@@ -280,21 +370,23 @@
     // If necessary, prepare for a new round
     if(_shotInRound == 6) {
         
-        // Switch shooting team ID
-        _shootingTeamIdentifier = _shootingTeamIdentifier == _score.homeTeamIdentifier  ? _score.awayTeamIdentifier : _score.homeTeamIdentifier;
+        if([_score bringBacks]) {
+            
+            [self prepareForRoundWithBringBacks];
+            
+        } else [self prepareForRound];
         
-        // Prepare for a new round
-        [self prepareForRound];
     }
     
     // If necessary, prepare for a new turn
-    if(_shotInRound == 3) {
+    else if(_shotInRound == 3) {
         
-        // Switch shooting team ID
-        _shootingTeamIdentifier = _shootingTeamIdentifier == _score.homeTeamIdentifier  ? _score.awayTeamIdentifier : _score.homeTeamIdentifier;
-        
-        // Prepare for a new round
-        [self prepareForTurn];
+        if([_score bringBacks]) {
+            
+            // Replace this with prepareForTurnWithBringBacks
+            [self prepareForTurnWithBringBacks];
+            
+        } else [self prepareForTurn];
     }
 }
 
@@ -338,13 +430,60 @@
 
 - (void)cupHitBy:(Player *)p inView:(PlayerTurnView *)view {
     [self shooter:p didHitACup:YES];
-    [self updateHitCounter];
+    [self updateNavBar];
 }
 
 - (void)cupMissedBy:(Player *)p inView:(PlayerTurnView *)view {
     [self shooter:p didHitACup:NO];
 }
 
-# pragma mark - RKObjectMapping Delegate Methods
+- (void)undoTappedForPlayerView:(PlayerTurnView *)view {
+    
+    // Get the last shot
+    Shot *lastShot = [((Round*)[_score.roundsAttributes lastObject]).shots lastObject];
+    
+    // Only undo if the shot to undo is the most recent shot
+    if(view.player.identifier == lastShot.playerIdentifier) {
+
+        // Decrement local _shotInRound counter
+        _shotInRound--;
+        
+        // Check if the shot to undo was a hit
+        if(lastShot.cup != 0) {
+            
+            // If it was a home team shot that hit a cup...
+            if(_shootingTeamIdentifier == _score.homeTeamIdentifier)
+                
+                // Decrement home team cup hits
+                _homeTeamCupHits--;
+            
+            // If it was a home team shot that hit a cup...
+            if(_shootingTeamIdentifier == _score.awayTeamIdentifier)
+                
+                // Decrement away team cup hits
+                _awayTeamCupHits--;
+        }
+            
+        
+        // Remove the last shot attribute
+        [((Round*)[_score.roundsAttributes lastObject]).shots removeLastObject];
+        
+        // Fix the view
+        [view setBackgroundColor:[UIColor whiteColor]];
+        [view.hitButton setHidden:NO];
+        [view.missButton setHidden:NO];
+        [view.undoButton setHidden:YES];
+        [view.cupLabel setHidden:YES];
+        
+        // Update the nav bar to reflect the change
+        [self updateNavBar];
+        
+    } else {
+        NSLog(@"You can't undo that!!!");
+        // You can't do this operation! popup (using MBProgressHUD)
+        int hello = 5;
+        hello++;
+    }
+}
 
 @end

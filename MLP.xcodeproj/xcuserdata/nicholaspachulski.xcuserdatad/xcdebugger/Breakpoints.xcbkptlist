@@ -86,22 +86,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MLP/ScoreGameVC.m"
-         timestampString = "357168761.41436"
+         timestampString = "357449403.188776"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "407"
-         endingLineNumber = "407">
+         startingLineNumber = "549"
+         endingLineNumber = "549">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MLP/ScoreGameVC.m"
-         timestampString = "357168761.41436"
+         timestampString = "357449403.188776"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "409"
-         endingLineNumber = "409">
+         startingLineNumber = "551"
+         endingLineNumber = "551">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -186,33 +186,33 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MLP/ScoreGameVC.m"
-         timestampString = "357168761.41436"
+         timestampString = "357449403.188776"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "384"
-         endingLineNumber = "384">
+         startingLineNumber = "526"
+         endingLineNumber = "526">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MLP/ScoreGameVC.m"
-         timestampString = "357168761.41436"
+         timestampString = "357449403.188776"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "369"
-         endingLineNumber = "369">
+         startingLineNumber = "511"
+         endingLineNumber = "511">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MLP/ScoreGameVC.m"
-         timestampString = "357168761.41436"
+         timestampString = "357449403.188776"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "436"
-         endingLineNumber = "436">
+         startingLineNumber = "578"
+         endingLineNumber = "578">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -226,6 +226,19 @@
          endingLineNumber = "14"
          landmarkName = "@implementation GameScore"
          landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MLP/ScoreGameVC.m"
+         timestampString = "357448570.762906"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "260"
+         endingLineNumber = "260"
+         landmarkName = "-prepareForRoundWithBringBacks"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

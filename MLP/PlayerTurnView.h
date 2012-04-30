@@ -21,5 +21,5 @@
 
 - (IBAction)cupHit;
 - (IBAction)cupMissed;
-- (IBAction)undoHit;
+- (IBAction)undoTapped;
 @end

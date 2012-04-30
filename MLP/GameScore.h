@@ -27,4 +27,5 @@
 @property(strong, nonatomic)RKObjectMapping *shotSerialization;
 
 - (void)addRound;
+- (BOOL)bringBacks;
 @end

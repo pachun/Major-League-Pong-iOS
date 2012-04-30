@@ -50,6 +50,7 @@
 		EE76B594152D6148007BD356 /* UIGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76B593152D6148007BD356 /* UIGameCell.m */; };
 		EE76B5C6152D6DBC007BD356 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B5C5152D6DBB007BD356 /* CoreText.framework */; };
 		EE7C51211549E9DE00D62B61 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7C51201549E9DE00D62B61 /* icon.png */; };
+		EE7C5131154A0E9300D62B61 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7C5130154A0E9300D62B61 /* MBProgressHUD.m */; };
 		EE803D05153CD9FB00B7A2FE /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = EE803D04153CD9FB00B7A2FE /* grey.png */; };
 		EE86ED74153F819200C5E55D /* PlayerReselectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE86ED73153F819200C5E55D /* PlayerReselectVC.m */; };
 		EE86ED78154081D100C5E55D /* PlayerTurnView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE86ED77154081D100C5E55D /* PlayerTurnView.m */; };
@@ -186,6 +187,8 @@
 		EE76B593152D6148007BD356 /* UIGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGameCell.m; sourceTree = "<group>"; };
 		EE76B5C5152D6DBB007BD356 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		EE7C51201549E9DE00D62B61 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		EE7C512F154A0E9300D62B61 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		EE7C5130154A0E9300D62B61 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		EE803D04153CD9FB00B7A2FE /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
 		EE86ED72153F819200C5E55D /* PlayerReselectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerReselectVC.h; sourceTree = "<group>"; };
 		EE86ED73153F819200C5E55D /* PlayerReselectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerReselectVC.m; sourceTree = "<group>"; };
@@ -274,6 +277,7 @@
 		EE76B4EA152928D2007BD356 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE7C512E154A0E4200D62B61 /* MBProgressHUD */,
 				EE76B5C5152D6DBB007BD356 /* CoreText.framework */,
 				EE76B5321529381D007BD356 /* CFNetwork.framework */,
 				EE76B5331529381D007BD356 /* CoreData.framework */,
@@ -531,6 +535,15 @@
 				EEFD50D5152DF20500E2F599 /* GameCell */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		EE7C512E154A0E4200D62B61 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EE7C512F154A0E9300D62B61 /* MBProgressHUD.h */,
+				EE7C5130154A0E9300D62B61 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		EE86ED7515407C0300C5E55D /* PlayerTurn */ = {
@@ -891,6 +904,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE76B511152928D2007BD356 /* MLPTests.m in Sources */,
+				EE7C5131154A0E9300D62B61 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

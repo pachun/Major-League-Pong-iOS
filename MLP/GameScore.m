@@ -57,6 +57,44 @@
     [_roundsAttributes addObject:nextRound];
 }
 
+// If 3 most recent shot cups are not "0", then return true
+- (BOOL)bringBacks {
+    
+    // if there are 0 rounds return false
+    if([_roundsAttributes count]==0) return false;
+    
+    // If there is only 1 round, with less than 3 shots, return false
+    if([_roundsAttributes count]==1 && [((Round *)[_roundsAttributes objectAtIndex:0]).shots count] < 3)
+        return false;
+    
+    Round *round = (Round *)[_roundsAttributes lastObject];
+    
+    // If the current round's shot count is not divisible by 3, return false
+    if([round.shots count] % 3 != 0)
+        return false;
+    
+    // Check if the last 3 shots were all not misses - if any of them were: fail
+    if([round.shots count]==6) {
+        
+        if( ((Shot *)[round.shots objectAtIndex:3]).cup==0 || 
+            ((Shot *)[round.shots objectAtIndex:4]).cup==0 ||
+            ((Shot *)[round.shots objectAtIndex:5]).cup==0)
+            return false;
+        
+    } else {
+        
+        if( ((Shot *)[round.shots objectAtIndex:0]).cup==0 || 
+            ((Shot *)[round.shots objectAtIndex:1]).cup==0 ||
+            ((Shot *)[round.shots objectAtIndex:2]).cup==0)
+            return false;
+        
+    }
+    
+    
+    // Still around? Last 3 shots were cup hits!
+    return true;
+}
+
 - (id)init {
     if(self = [super init]) {
         

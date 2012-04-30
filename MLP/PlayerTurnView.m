@@ -46,8 +46,9 @@
     [score cupMissedBy:_player inView:self];
 }
 
-- (IBAction)undoHit {
-    
+- (IBAction)undoTapped {
+    ScoreGameVC *score = (ScoreGameVC *)_delegate;
+    [score undoTappedForPlayerView:self];
 }
 
 @end

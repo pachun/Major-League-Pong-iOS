@@ -1097,6 +1097,21 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fgx-fi-5G6">
+                                        <rect key="frame" x="16" y="221" width="128" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="UNDO">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoTapped" destination="HJs-dD-Clk" eventType="touchUpInside" id="pbu-Ku-VoX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -1105,6 +1120,7 @@
                                     <outlet property="missButton" destination="Rgj-hT-4a0" id="PbW-S9-ehR"/>
                                     <outlet property="nameLabel" destination="lmg-8c-SR9" id="8Sg-Af-gGl"/>
                                     <outlet property="playerGravatar" destination="LpZ-fn-VCZ" id="0qe-83-6PN"/>
+                                    <outlet property="undoButton" destination="fgx-fi-5G6" id="KS8-m8-kLc"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" id="sws-ri-LIB" customClass="PlayerTurnView">
@@ -1159,6 +1175,21 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lvw-Fs-djL">
+                                        <rect key="frame" x="16" y="219" width="128" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="UNDO">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoTapped" destination="sws-ri-LIB" eventType="touchUpInside" id="yzO-pd-K4d"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -1167,6 +1198,7 @@
                                     <outlet property="missButton" destination="fIY-Te-J2j" id="xeE-CQ-Lip"/>
                                     <outlet property="nameLabel" destination="teN-47-DAn" id="wMm-7X-uBa"/>
                                     <outlet property="playerGravatar" destination="c0e-lB-i45" id="HC1-es-5M0"/>
+                                    <outlet property="undoButton" destination="Lvw-Fs-djL" id="dCN-CM-egh"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" id="Nv1-8H-Rg0" customClass="PlayerTurnView">
@@ -1221,6 +1253,21 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hiZ-0f-IcA">
+                                        <rect key="frame" x="20" y="219" width="128" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="UNDO">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoTapped" destination="Nv1-8H-Rg0" eventType="touchUpInside" id="cfr-BN-UiT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -1229,6 +1276,7 @@
                                     <outlet property="missButton" destination="sla-1x-06Q" id="txg-Sa-ApM"/>
                                     <outlet property="nameLabel" destination="SRg-t5-4qO" id="Rbe-CR-Ozy"/>
                                     <outlet property="playerGravatar" destination="JQ4-Ga-k9R" id="UqS-5Q-oE4"/>
+                                    <outlet property="undoButton" destination="hiZ-0f-IcA" id="wHR-9Z-ynN"/>
                                 </connections>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" id="ogl-Gc-lzi" customClass="WinnerView">
@@ -1375,7 +1423,7 @@
             <relationships>
                 <relationship kind="action" name="cupHit"/>
                 <relationship kind="action" name="cupMissed"/>
-                <relationship kind="action" name="undoHit"/>
+                <relationship kind="action" name="undoTapped"/>
                 <relationship kind="outlet" name="cupLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="hitButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="missButton" candidateClass="UIButton"/>
