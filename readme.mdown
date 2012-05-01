@@ -1,0 +1,16 @@
+# Central Site
+
+http://mlpong.herokuapp.com/
+
+# The Concept
+
+Create a league among friends. Create a season within that league for a new tournament. Use the app to score the games.
+
+# Rules
+
+The rules are static; 3 players per team, 1 shot each. Automatic reracks at six and three cups, using a minimal cup move algorithm; e.g. you never move three cups for a rerack unless there are three islands. Rollbacks if all three players hit a cup.
+
+# CPP, LPP, SPP, GPP Explained
+
+Respectively, these acronymns represent career, league, season, and game point percentage. It is calculated by weighing your hit percentage (which is just [number of hits]/[number of misses]). The weighing occurs for cup indecies 4, 7, 8, 9, and 10. They are presumably harder because they are rereack cups. All but the latter are weighted as two cup hits instead of one in a "point percentage" statistic. The tenth cup is weighted as three cup hits.
+
