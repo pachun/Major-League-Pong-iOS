@@ -12,7 +12,7 @@ The rules are static; 3 players per team, 1 shot each. Automatic reracks at six 
 
 # CPP, LPP, SPP, GPP
 
-Respectively, these acronymns represent __career, league, season, and game point percentage__. It is __calculated by weighing your hit percentage__ (which is just [number of hits]/[number of misses]). The weighing occurs for cup indecies 4, 7, 8, 9, and 10. They are presumably harder because they are either rereack or last cups. All but the latter are weighted as two cup hits instead of one in a "point percentage" statistic. The tenth cup is weighted as three cup hits.
+Respectively, these acronymns represent __career, league, season, and game point percentage__. It is __calculated by weighing your hit percentage__ (which is just [number of hits]/[number of misses]). The weighing occurs for __cup indecies 4, 7, 8, 9, and 10__. They are presumably harder because they are either rereack or last cups. __All but the latter are weighted as two cup hits instead of one in a "point percentage" statistic. The tenth cup is weighted as three cup hits.__
 
 # Central Site
 
