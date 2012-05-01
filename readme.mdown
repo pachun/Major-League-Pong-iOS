@@ -4,7 +4,11 @@ http://mlpong.herokuapp.com/
 
 # The Concept
 
-Create a league among friends. Create a season within that league for a new tournament. Use the app to score the games.
+Create a beer pong league among friends. Create a season within that league for a new tournament. The next time you see each other, create a new season within that league for a new tournament.
+
+Basically a league defines a set of players and a season defines a tournament among those players.
+
+Use the app to score the games.
 
 # Rules
 
