@@ -10,4 +10,6 @@
 
 @interface GamesVC : UITableViewController
 
+@property(strong, nonatomic)IBOutlet UISegmentedControl *gameViewToggler;
+
 @end

@@ -24,6 +24,7 @@
 
 @interface GamesVC ()
 - (void)commonInit;
+- (void)gamesToggled:(id)sender;
 @end
 
 @implementation GamesVC
@@ -31,6 +32,7 @@
 # pragma mark - Accessor Synthesizers
 
 // None
+@synthesize gameViewToggler = _gameViewToggler;
 
 #pragma mark - Interface Actions
 
@@ -43,6 +45,17 @@
         [self commonInit];
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //self.navigationItem.title = [[SeasonDC sharedInstance] selectedSeason].name;
+    UISegmentedControl * gameViewToggler = (UISegmentedControl*)self.tabBarController.navigationItem.titleView;
+    self.tabBarController.navigationItem.titleView.hidden = NO;
+    [gameViewToggler addTarget: self 
+                        action: @selector(gamesToggled:) 
+              forControlEvents: UIControlEventValueChanged];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -89,8 +102,10 @@
 
 # pragma mark - Private Methods
 
-- (void)commonInit {
-    //self.navigationItem.title = [[SeasonDC sharedInstance] selectedSeason].name;
+- (void)commonInit { }
+
+- (void)gamesToggled:(id)sender {
+    NSLog(@"Games view toggled.");
 }
 
 @end

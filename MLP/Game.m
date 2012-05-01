@@ -24,4 +24,27 @@
     return [NSString stringWithFormat:@"{Game: [id=%i, home_team=%@, away_team=%@]}", _identifier, _home_team, _away_team];
 }
 
+// Sort by date
+- (NSComparisonResult)compare:(Game *)g {
+    
+    // Parse date's strings to an NSDate
+    NSDateFormatter *format = [NSDateFormatter new];
+    [format setDateFormat:@"MM/dd/yyyy hh:mma"];
+    
+    NSString *otherDateString;
+    NSString *myDateString;
+    
+    if([g.time length]==7)
+        otherDateString = [NSString stringWithFormat:@"%@ 0%@", g.date, g.time];
+    else otherDateString = [NSString stringWithFormat:@"%@ %@", g.date, g.time];
+    if([_time length]==7)
+        otherDateString = [NSString stringWithFormat:@"%@ 0%@", _date, _time];
+    else otherDateString = [NSString stringWithFormat:@"%@ %@", _date, _time];
+    
+    NSDate *otherDate = [format dateFromString:otherDateString];
+    NSDate *myDate = [format dateFromString:myDateString];
+    
+    return [myDate compare:otherDate];
+}
+
 @end

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		EE3FF35B154E4D3800DE398F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7C5130154A0E9300D62B61 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EE3FF35F1550953400DE398F /* 16-line-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3FF35C1550953400DE398F /* 16-line-chart.png */; };
+		EE3FF3601550953400DE398F /* 17-bar-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3FF35D1550953400DE398F /* 17-bar-chart.png */; };
+		EE3FF3611550953400DE398F /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3FF35E1550953400DE398F /* 18-envelope.png */; };
+		EE3FF364155097AC00DE398F /* 33-cabinet.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3FF362155097AC00DE398F /* 33-cabinet.png */; };
+		EE3FF365155097AC00DE398F /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3FF363155097AC00DE398F /* 40-inbox.png */; };
 		EE76B4EC152928D2007BD356 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B4EB152928D2007BD356 /* UIKit.framework */; };
 		EE76B4EE152928D2007BD356 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B4ED152928D2007BD356 /* Foundation.framework */; };
 		EE76B4F0152928D2007BD356 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76B4EF152928D2007BD356 /* CoreGraphics.framework */; };
@@ -122,6 +127,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE3FF35C1550953400DE398F /* 16-line-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "16-line-chart.png"; sourceTree = "<group>"; };
+		EE3FF35D1550953400DE398F /* 17-bar-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "17-bar-chart.png"; sourceTree = "<group>"; };
+		EE3FF35E1550953400DE398F /* 18-envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "18-envelope.png"; sourceTree = "<group>"; };
+		EE3FF362155097AC00DE398F /* 33-cabinet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "33-cabinet.png"; sourceTree = "<group>"; };
+		EE3FF363155097AC00DE398F /* 40-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40-inbox.png"; sourceTree = "<group>"; };
 		EE76B4E7152928D2007BD356 /* MLP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE76B4EB152928D2007BD356 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EE76B4ED152928D2007BD356 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -308,6 +318,11 @@
 		EE76B4F2152928D2007BD356 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE3FF362155097AC00DE398F /* 33-cabinet.png */,
+				EE3FF363155097AC00DE398F /* 40-inbox.png */,
+				EE3FF35C1550953400DE398F /* 16-line-chart.png */,
+				EE3FF35D1550953400DE398F /* 17-bar-chart.png */,
+				EE3FF35E1550953400DE398F /* 18-envelope.png */,
 				EE7C51201549E9DE00D62B61 /* icon.png */,
 				EE803D04153CD9FB00B7A2FE /* grey.png */,
 				EEFD5107152F936D00E2F599 /* NSString+MD5.h */,
@@ -829,6 +844,11 @@
 				EE76B56D152B5865007BD356 /* 112-group.png in Resources */,
 				EE803D05153CD9FB00B7A2FE /* grey.png in Resources */,
 				EE7C51211549E9DE00D62B61 /* icon.png in Resources */,
+				EE3FF35F1550953400DE398F /* 16-line-chart.png in Resources */,
+				EE3FF3601550953400DE398F /* 17-bar-chart.png in Resources */,
+				EE3FF3611550953400DE398F /* 18-envelope.png in Resources */,
+				EE3FF364155097AC00DE398F /* 33-cabinet.png in Resources */,
+				EE3FF365155097AC00DE398F /* 40-inbox.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

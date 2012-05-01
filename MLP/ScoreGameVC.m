@@ -35,6 +35,7 @@
 
 @interface ScoreGameVC ()
 - (void)commonInit;
+- (void)backButtonTapped:(id)sender;
 - (void)prepareForGame;
 - (void)prepareForRound;
 - (void)prepareForTurn;
@@ -153,6 +154,23 @@
     
     // initialize gesturizer that detects end of game touches
     _doneWithGameTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doneGame)];
+    
+    // Override back button functionality to ask if the user is sure they want to lose all game data
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Quit" style:UIBarButtonItemStyleBordered target:self action:@selector(backButtonTapped:)];
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.leftBarButtonItem = item;
+}
+
+- (void)backButtonTapped:(id)sender {
+    
+    // Ask the user if they want to lose all game data in a popup
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle: @"Hold on!"
+                          message: @"You're about to lose all game data!"
+                          delegate: self
+                          cancelButtonTitle:@"Continue"
+                          otherButtonTitles:@"Cancel",nil];
+    [alert show];
 }
 
 - (void)doneGame {
@@ -304,6 +322,8 @@
 
 - (void)reportScore {
     
+    // Display and MBProgressHUD with the envelope in it and a note "Reporting Score!"
+    
     // Get the current games path for posting
     NSString *path = [[GameDC sharedInstance] selectedGame].path;
     
@@ -427,21 +447,18 @@
         }
 }
 
-# pragma mark - RKObjectLoader Delegate Methods
-
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
-    NSLog(@"Object Loader Failed With Error: %@", error);
-}
-
-# pragma mark - PlayerTurnView Delegate Methods
-
-- (void)cupHitInView:(PlayerTurnView *)view {
-    [self shooterView:view didHitACup:YES];
-    [self updateNavBar];
-}
-
-- (void)cupMissedInView:(PlayerTurnView *)view {
-    [self shooterView:view didHitACup:NO];
+- (void)HUDWithMessage:(NSString *)message {
+    
+    // Create a smooth popup with the message
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [hud setMode:MBProgressHUDModeCustomView];
+    [hud setLabelText:message];
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 0.01 * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [NSThread sleepForTimeInterval:1];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
 }
 
 - (void)undoTappedForPlayerView:(PlayerTurnView *)view {
@@ -451,7 +468,7 @@
     
     // Only undo if the shot to undo is the most recent shot
     if(view.player.identifier == lastShot.playerIdentifier) {
-
+        
         // Decrement local _shotInRound counter
         _shotInRound--;
         
@@ -470,7 +487,7 @@
                 // Decrement away team cup hits
                 _awayTeamCupHits--;
         }
-            
+        
         
         // Remove the last shot attribute
         [((Round*)[_score.roundsAttributes lastObject]).shots removeLastObject];
@@ -493,18 +510,29 @@
     }
 }
 
-- (void)HUDWithMessage:(NSString *)message {
-    
-    // Create a smooth popup with the message
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [hud setMode:MBProgressHUDModeCustomView];
-    [hud setLabelText:message];
-    
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 0.01 * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [NSThread sleepForTimeInterval:1];
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-    });
+# pragma mark - RKObjectLoader Delegate Methods
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
+    NSLog(@"Object Loader Failed With Error: %@", error);
+}
+
+# pragma mark - PlayerTurnView Delegate Methods
+
+- (void)cupHitInView:(PlayerTurnView *)view {
+    [self shooterView:view didHitACup:YES];
+    [self updateNavBar];
+}
+
+- (void)cupMissedInView:(PlayerTurnView *)view {
+    [self shooterView:view didHitACup:NO];
+}
+
+# pragma mark - UIAlertView Delegate Methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSLog(@"button index: %i", buttonIndex);
+    if(buttonIndex == 0) [self dismissModalViewControllerAnimated:YES];
+        //[self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

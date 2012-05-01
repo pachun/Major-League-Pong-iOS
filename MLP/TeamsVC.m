@@ -51,6 +51,16 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.tabBarController.navigationItem.titleView.hidden = YES;
+    /* Not Working....
+     UILabel *titleLabel = [[UILabel alloc] init];
+     titleLabel.text = @"Teams";
+     self.tabBarController.navigationItem.titleView = titleLabel;*/
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -100,8 +110,6 @@
 
 # pragma mark - Private Methods
 
-- (void)commonInit {
-    self.navigationItem.title = [[SeasonDC sharedInstance] selectedSeason].name;
-}
+- (void)commonInit { }
 
 @end

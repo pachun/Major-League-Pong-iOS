@@ -19,8 +19,6 @@
 #pragma mark - Accessor Synthesizers
 
 @synthesize games = _games;
-@synthesize scored = _scored;
-@synthesize unscored = _unscored;
 @synthesize selected = _selected;
 @synthesize mapping = _mapping;
 
@@ -63,18 +61,6 @@ static GameDC *sharedInstance;
     return [self.games count];
 }
 
-- (void)sort {
-    /*
-    for(Game *g in _games) {
-        NSDateFormatter *df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"dd'/'MM'/'yyyy HH':'mm"];
-        NSString *dateString = [NSString stringWithFormat:@"%@ %@", g.date, g.time];
-        dateString = [dateString substringToIndex:[dateString length]-3];
-        NSDate *date = [df dateFromString:dateString];
-        NSLog(@"%@ ==> %@", dateString, date);
-    }*/
-}
-
 - (Game *)selectedGame {
     return [self.games objectAtIndex:self.selected];
 }
@@ -82,18 +68,6 @@ static GameDC *sharedInstance;
 - (Game *)gameAtIndex:(int)index {
     if(index >= 0 && index < [self count])
         return [self.games objectAtIndex:index];
-    else return nil;
-}
-
-- (Game *)scoredGameAtIndex:(int)index {
-    if(index >= 0 && index < [_scored count])
-        return [_scored objectAtIndex:index];
-    else return nil;
-}
-
-- (Game *)unscoredGameAtIndex:(int)index {
-    if(index >= 0 && index < [_unscored count])
-        return [_unscored objectAtIndex:index];
     else return nil;
 }
 
@@ -116,12 +90,13 @@ static GameDC *sharedInstance;
     _games = [[NSMutableArray alloc] init];
     for(Game *g in objects) {
         [_games addObject:g];
-        if(g.winner_id) [_scored addObject:g];
-        else [_unscored addObject:g];
     }
     
     // Sort the games according to their date / times
-    [self sort];
+    _games = (NSMutableArray *)[_games sortedArrayUsingSelector:@selector(compare:)];
+    NSLog(@"Games just sorted.");
+    for(Game *g in _games)
+        NSLog(@"%@ %@", g.date, g.time);
     
     // Post a notification indicating Game load time is completed
     [[NSNotificationCenter defaultCenter] postNotificationName:@"GamesLoaded" object:self];

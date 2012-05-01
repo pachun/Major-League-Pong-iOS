@@ -12,7 +12,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybq-bg-3Ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="s80-7F-8fv" customClass="LoginVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="5sn-B2-y7Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -143,7 +143,7 @@
                             <outlet property="delegate" destination="s80-7F-8fv" id="OAU-XL-mWT"/>
                         </connections>
                     </tableView>
-                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
                         <outlet property="errorLabel" destination="cLi-AY-d0S" id="fSm-et-1wf"/>
                         <outlet property="passwordField" destination="Vqk-Uq-vfI" id="1q5-Bc-C8F"/>
@@ -161,7 +161,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sj-ui-oal" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="bSn-9W-40H" customClass="LeaguesVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Aif-3h-TAc">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -201,7 +201,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7g-Vs-dzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="URG-HA-2qE" customClass="SeasonsVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="pry-7u-o35">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -222,7 +222,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Seasons" id="nHg-87-DF7"/>
                     <connections>
-                        <segue destination="G8j-sl-lVl" kind="push" identifier="ShowSeasonDetailsSegue" id="l1H-qK-hCH"/>
+                        <segue destination="G8j-sl-lVl" kind="push" identifier="ShowSeasonDetailsSegue" id="fP2-0y-o7X"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -233,6 +233,18 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOI-cn-n2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="G8j-sl-lVl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JOz-Cc-FHC">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="v0C-xL-Vjk">
+                            <rect key="frame" x="74" y="7" width="171" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="" image="33-cabinet.png"/>
+                                <segment title="" image="40-inbox.png"/>
+                            </segments>
+                            <color key="tintColor" red="0.6793478261" green="0.6793478261" blue="0.6793478261" alpha="0.0" colorSpace="calibratedRGB"/>
+                        </segmentedControl>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eVC-le-qwt">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -254,7 +266,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASD-9m-bOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="53u-lK-oVl" customClass="TeamsVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" id="d7k-bZ-t6n">
-                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -330,7 +342,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGE-9Y-gjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ezH-Zh-nPb" customClass="TeamDetailVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9Gb-RG-hna">
-                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -540,7 +552,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3c-iM-DQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="NRP-MD-ZBF" customClass="PlayersVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="5yX-T9-0QX">
-                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -598,7 +610,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYh-Wc-PD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ggW-bV-hAR" customClass="PlayerDetailVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DPh-In-GsD">
-                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -805,7 +817,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOT-xr-jOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="EuM-aC-dyc" customClass="GamesVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" id="bty-K9-0nx">
-                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -861,9 +873,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Games" image="88-beer-mug.png" id="8PG-ts-T3z"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="3hj-ty-I6M">
-                        <nil key="title"/>
-                    </navigationItem>
                     <connections>
                         <segue destination="5Df-Th-g5j" kind="modal" identifier="TeamSelectSegue" id="DVT-MP-aGt"/>
                     </connections>
@@ -877,11 +886,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mM7-yb-t7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="et5-ex-I9v" customClass="PlayerSelectVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sg5-Tf-hgN">
-                        <rect key="frame" x="0.0" y="44" width="480" height="276"/>
+                        <rect key="frame" x="0.0" y="64" width="480" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="osz-QM-i79" customClass="PlayerSelectView">
-                                <rect key="frame" x="0.0" y="0.0" width="246" height="276"/>
+                                <rect key="frame" x="0.0" y="0.0" width="246" height="256"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hZh-N6-ng2">
@@ -926,7 +935,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kVI-NA-onR">
-                                        <rect key="frame" x="0.0" y="0.0" width="246" height="276"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="246" height="256"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -950,7 +959,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" id="um5-en-JOj" customClass="PlayerSelectView">
-                                <rect key="frame" x="246" y="0.0" width="234" height="276"/>
+                                <rect key="frame" x="246" y="0.0" width="234" height="256"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="tZB-fW-mjL">
@@ -989,7 +998,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2in-lD-0s0">
-                                        <rect key="frame" x="0.0" y="0.0" width="234" height="276"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="256"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -1044,11 +1053,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7J-Pn-Fqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="IEs-dL-zZh" customClass="ScoreGameVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TgK-P1-2wo">
-                        <rect key="frame" x="0.0" y="44" width="480" height="276"/>
+                        <rect key="frame" x="0.0" y="64" width="480" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="HJs-dD-Clk" customClass="PlayerTurnView">
-                                <rect key="frame" x="0.0" y="0.0" width="164" height="276"/>
+                                <rect key="frame" x="0.0" y="0.0" width="164" height="256"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HU5-21-9is">
@@ -1126,7 +1135,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" id="sws-ri-LIB" customClass="PlayerTurnView">
-                                <rect key="frame" x="163" y="0.0" width="160" height="276"/>
+                                <rect key="frame" x="163" y="0.0" width="160" height="256"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DrJ-0R-ecZ">
@@ -1204,7 +1213,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" id="Nv1-8H-Rg0" customClass="PlayerTurnView">
-                                <rect key="frame" x="319" y="0.0" width="167" height="276"/>
+                                <rect key="frame" x="319" y="0.0" width="167" height="256"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pbi-y4-QKt">
@@ -1282,7 +1291,7 @@
                                 </connections>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" id="ogl-Gc-lzi" customClass="WinnerView">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="276"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="256"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Puff, puff, pass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xYN-ea-p9B">
@@ -1355,17 +1364,22 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="2836" y="642"/>
+            <point key="canvasLocation" x="2750" y="642"/>
         </scene>
     </scenes>
     <resources>
         <image name="111-user.png" width="24" height="21"/>
         <image name="112-group.png" width="32" height="21"/>
+        <image name="33-cabinet.png" width="20" height="26"/>
+        <image name="40-inbox.png" width="24" height="24"/>
         <image name="88-beer-mug.png" width="22" height="27"/>
     </resources>
     <classes>
         <class className="GamesVC" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GamesVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="gameViewToggler" candidateClass="UISegmentedControl"/>
+            </relationships>
         </class>
         <class className="LeaguesVC" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LeaguesVC.h"/>
